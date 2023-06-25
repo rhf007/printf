@@ -31,5 +31,5 @@ int checkSpecifier(char *input, va_list args, int len)
 			break;
 	}
 
-	return(len);
+	return (len);
 }
