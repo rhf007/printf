@@ -8,7 +8,7 @@
  *
  * Return: The updated length of the output string.
  */
-int checkSpecifier(char *input, va_list args, int len)
+int checkSpecifier(char input, va_list args, int len)
 {
 	char charc, *str;
 
