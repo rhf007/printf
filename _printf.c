@@ -12,10 +12,19 @@ int _printf(const char *format, ...)
 
 	va_start(args, format);
 
+	if (format == NULL)
+	{
+		return (-1);
+	}
+
 	while (format != NULL && format[i] != '\0')
 	{
 		if (format[i] == '%')
 		{
+			if (format[i + 1] == '\0')
+			{
+				return (-1);
+			}
 			len += checkSpecifier(format[i + 1], args, len);
 			i++;
 		}
