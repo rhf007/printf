@@ -12,4 +12,22 @@ int _printf(const char *format, ...)
 	va_list args;
 
 	va_start(args, format);
+
+	while (format != NULL && format[i] != '\0')
+	{
+		if (format[i] == '%')
+		{
+			len += checkSpecifier(format[i + 1], args, len);
+			i++;
+		}
+		else
+		{
+			write(1, &format[i], 1);
+			len++;
+		}
+		i++;
+	}
+
+	va_end(args);
+	return(len);
 }
