@@ -29,7 +29,11 @@ Here are a few examples to illustrate the usage of `printf`:
 
 ```c
 #include <stdio.h>
-
+/**
+ * main - main fun..edwefefrffrf.
+ *
+ * Return: 0 is suc
+ * */
 int main() {
     int age = 25;
     float height = 1.75;
