@@ -28,20 +28,15 @@ int print_str(va_list args)
 	if (str == NULL)
 	{
 		_puts(n);
-
 		for (len = 0; n[len] != '\0'; len++)
-		{
 			;
-		}
 	}
 	else
 	{
 		_puts(str);
 
 		for (len = 0; str[len] != '\0'; len++)
-		{
 			;
-		}
 	}
 
 	return (len);
@@ -67,15 +62,25 @@ int print_p(va_list args)
 
 int print_di(va_list args)
 {
-	int len = 0, i;
+	int len = 0, i, j = 0;
+	char *counter;
 
 	i = va_arg(args, int);
 	if (i < 0)
 	{
 		i = -i;
 		_putchar('-');
+		len++;
 	}
 	_puts(convert(i, 10));
+
+	counter = convert(i, 10);
+
+	while (counter[j])
+	{
+		len++;
+		j++;
+	}
 
 	return (len);
 }
