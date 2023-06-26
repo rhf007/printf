@@ -26,7 +26,7 @@ typedef struct spec
 
 int print_char(va_list args);
 int print_str(va_list args);
-int print_num(va_list args);
+/*int print_num(va_list args);*/
 int print_p(va_list args);
 
 int (*get_spec_func(char c))(va_list args);

@@ -11,12 +11,12 @@ int (*get_spec_func(char c))(va_list args)
 	spec specifier[] = {
 		{"c", print_char},
 		{"s", print_str},
-		{"d", print_num},
-		{"i", print_num},
-		{"o", print_num},
-		{"b", print_num},
-		{"x", print_num},
-		{"X", print_num},
+		/*{"d", print_num},*/
+		/*{"i", print_num},*/
+		/*{"o", print_num},*/
+		/*{"b", print_num},*/
+		/*{"x", print_num},*/
+		/*{"X", print_num},*/
 		{"%", print_p},
 		{NULL, NULL}
 	};
