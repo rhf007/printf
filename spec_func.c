@@ -8,8 +8,9 @@
 int print_char(va_list args)
 {
 	int c = va_arg(args, int);
-	_putchar(c);
-	return(1);
+
+	_putchar (c);
+	return (1);
 }
 
 /**
@@ -42,16 +43,16 @@ int print_str(va_list args)
 		}
 	}
 
-	return(len);
+	return (len);
 
 }
 
 /**
- * print_% - print percent sign
+ * print_p - print percent sign
  * @args: checked string
  * Return: length
  */
-int print_%(va_list args)
+int print_p(va_list args)
 {
 	_putchar('%');
 	return (1);

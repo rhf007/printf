@@ -11,7 +11,7 @@ int checkSpecifier(char input, va_list args, int len)
 {
 	char c, *str;
 
-	switch(input)
+	switch (input)
 	{
 		case'c':
 			c = va_arg(args, int);

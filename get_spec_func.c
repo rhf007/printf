@@ -17,7 +17,7 @@ int (*get_spec_func(char c))(va_list args)
 		{"b", print_num},
 		{"x", print_num},
 		{"X", print_num},
-		{"%", print_%},
+		{"%", print_p},
 		{NULL, NULL}
 	};
 
@@ -25,7 +25,7 @@ int (*get_spec_func(char c))(va_list args)
 	{
 		if (spec[i].spec[0] == c)
 		{
-			return(spec[i].f);
+			return (spec[i].f);
 		}
 	}
 

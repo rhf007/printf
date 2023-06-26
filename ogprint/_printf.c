@@ -1,19 +1,18 @@
 #include "main.h"
-
 /**
- * _printf - produce output according to a format
- * @format: output string
- * Return: no. of characters printed
+ * _printf - It will act like printf when give it s c % specifier
+ * @format: specifies the necessary operations
+ * Return: printed characters length
  */
 int _printf(const char *format, ...)
 {
-	int i, len = 0;
+	int i = 0, len = 0;
+
 	va_list args;
-	int (*func)(va_list);
 
 	va_start(args, format);
 
-	for (i = 0; format != NULL && format[i] != '\0'; i++)
+	while (format != NULL && format[i] != '\0')
 	{
 		if (format[i] == '%')
 		{
@@ -23,17 +22,13 @@ int _printf(const char *format, ...)
 			}
 			len += checkSpecifier(format[i + 1], args, len);
 			i++;
-
-			if (format[i + 1] == 's')
-			{
-				func = get_spec_func(args);
-			}
 		}
 		else
 		{
-			_putchar(format[i]);
+			write(1, &format[i], 1);
 			len++;
 		}
+		i++;
 	}
 	va_end(args);
 	return (len);
