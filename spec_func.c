@@ -54,6 +54,7 @@ int print_str(va_list args)
  */
 int print_p(va_list args)
 {
+	(void)args;
 	_putchar('%');
 	return (1);
 }
