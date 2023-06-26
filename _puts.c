@@ -3,14 +3,17 @@
 /**
  * _puts - print string
  * @str: string to be printed
+ * Return: string length
  */
-void _puts(char *str)
+int _puts(char *str)
 {
+	int i;
+
 	while (*str != '\0')
 	{
 		_putchar(*str);
-		str++;
+		i++, str++;
 	}
 
-	_putchar('\n');
+	return (i);
 }

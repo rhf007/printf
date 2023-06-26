@@ -15,7 +15,7 @@ int _printf(const char *format, ...);
 /**
  * struct spec - Struct op
  *
- * @spec: The specifier
+ * @z: The specifier
  * @f: The function associated
  */
 typedef struct spec

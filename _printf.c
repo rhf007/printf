@@ -20,9 +20,7 @@ int _printf(const char *format, ...)
 			format++;
 			func = get_spec_func(format);
 			if (*(format) == '\0')
-			{
 				return (-1);
-			}
 			else if (func == NULL)
 			{
 				_putchar(*(format - 1));
@@ -30,9 +28,7 @@ int _printf(const char *format, ...)
 				len += 2;
 			}
 			else
-			{
 				len += func(args);
-			}
 		}
 		else if (*format == '%' && *(format + 1) == '%')
 		{
@@ -45,7 +41,6 @@ int _printf(const char *format, ...)
 			_putchar(*format);
 			len++;
 		}
-
 		format++;
 	}
 	va_end(args);
