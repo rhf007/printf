@@ -10,6 +10,7 @@ int _printf(const char *format, ...)
 	int i, len = 0;
 	va_list args;
 	int (*func)(va_list);
+
 	va_start(args, format);
 
 	for (i = 0; format != NULL && format[i] != '\0'; i++)
@@ -22,7 +23,7 @@ int _printf(const char *format, ...)
 			}
 			len += checkSpecifier(format[i + 1], args, len);
 			i++;
-			
+
 			if (format[i + 1] == 's')
 			{
 				func = get_spec_func(args);
