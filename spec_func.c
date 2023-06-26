@@ -62,7 +62,9 @@ int print_p(va_list args)
  * print_num - print number
  * @args: checked string
  * Return: length
+ *
+ * int print_num(va_list args)
+ * {
+ * }
  */
-int print_num(va_list args)
-{
-}
+
