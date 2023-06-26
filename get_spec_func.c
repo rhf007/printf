@@ -11,8 +11,8 @@ int (*get_spec_func(const char *c))(va_list args)
 	spec specifier[] = {
 		{"c", print_char},
 		{"s", print_str},
-		/*{"d", print_num},*/
-		/*{"i", print_num},*/
+		{"d", print_di},
+		{"i", print_di},
 		/*{"o", print_num},*/
 		/*{"b", print_num},*/
 		/*{"x", print_num},*/

@@ -9,7 +9,7 @@ int print_char(va_list args)
 {
 	int c = va_arg(args, int);
 
-	_putchar (c);
+	_putchar(c);
 	return (1);
 }
 
@@ -22,7 +22,7 @@ int print_str(va_list args)
 {
 	int len = 0;
 
-	char *str = va_arg(args, char*);
+	char *str = va_arg(args, char *);
 	char *n = "(null)";
 
 	if (str == NULL)
@@ -45,7 +45,6 @@ int print_str(va_list args)
 	}
 
 	return (len);
-
 }
 
 /**
@@ -61,12 +60,22 @@ int print_p(va_list args)
 }
 
 /**
- * print_num - print number
+ * print_di - print number
  * @args: checked string
  * Return: length
- *
- * int print_num(va_list args)
- * {
- * }
  */
 
+int print_di(va_list args)
+{
+	int len = 0, i;
+
+	i = va_arg(args, int);
+	if (i < 0)
+	{
+		i = -i;
+		_putchar('-');
+	}
+	_puts(convert(i, 10));
+
+	return (len);
+}
