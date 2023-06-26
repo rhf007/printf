@@ -21,7 +21,6 @@ int _printf(const char *format, ...)
 				return (-1);
 			}
 			len += checkSpecifier(format[i + 1], args, len);
-			printf("lenlen%i",len);
 			i++;
 		}
 		else
