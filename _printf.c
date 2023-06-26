@@ -13,30 +13,33 @@ int _printf(const char *format, ...)
 
 	va_start(args, format);
 
-	for (i = 0; format != NULL && format[i] != '\0'; i++)
+	if (format != NULL)
 	{
-		if (format[i] == '%' && format[i + 1] == '\0')
+		for (i = 0; format[i] != '\0'; i++, len++)
 		{
-			return (-1);
-		}
-			/*len += checkSpecifier(format[i + 1], args, len), i++;*/
+			if (format[i] == '%' && format[i + 1] == '\0')
+			{
+				return (-1);
+			}
+				/*len += checkSpecifier(format[i + 1], args, len), i++;*/
 
-		if (format[i] == '%' && format[i + 1] != '\0')
-		{
-			func = get_spec_func(args);
-			if (func == NULL)
+			if (format[i] == '%' && format[i + 1] != '\0')
+			{
+				func = get_spec_func(args);
+				if (func == NULL)
+				{
+					_putchar(format[i]);
+				}
+				len += func(args) - 1;
+				i++;
+			}
+
+
+			else
 			{
 				_putchar(format[i]);
+				len++;
 			}
-			len += func(args);
-			i++;
-		}
-
-
-		else
-		{
-			_putchar(format[i]);
-			len++;
 		}
 	}
 	va_end(args);
