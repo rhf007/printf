@@ -12,11 +12,6 @@ int _printf(const char *format, ...)
 
 	va_start(args, format);
 
-	if (format == NULL)
-	{
-		return (-1);
-	}
-
 	while (format != NULL && format[i] != '\0')
 	{
 		if (format[i] == '%')
@@ -26,6 +21,7 @@ int _printf(const char *format, ...)
 				return (-1);
 			}
 			len += checkSpecifier(format[i + 1], args, len);
+			printf("lenlen%i",len);
 			i++;
 		}
 		else
