@@ -25,7 +25,8 @@ int _printf(const char *format, ...)
 
 			if (format[i] == '%' && format[i + 1] != '\0')
 			{
-				func = get_spec_func(format[i + 1]);
+				format++;
+				func = get_spec_func(format);
 				if (func == NULL)
 				{
 					_putchar(format[i]);

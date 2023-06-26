@@ -5,7 +5,7 @@
  * @c: specifier
  * Return: pointer to suitable function
  */
-int (*get_spec_func(char c))(va_list args)
+int (*get_spec_func(const char *c))(va_list args)
 {
 	int i;
 	spec specifier[] = {
@@ -21,10 +21,9 @@ int (*get_spec_func(char c))(va_list args)
 		{NULL, NULL}
 	};
 
-	
-	for(i = 0; specifier[i].z != NULL; i++)
+	for (i = 0; specifier[i].z; i++)
 	{
-		if (*specifier[i].z == c)
+		if (*c == specifier[i].z[0])
 		{
 			return (specifier[i].f);
 		}
