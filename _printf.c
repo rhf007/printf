@@ -7,12 +7,13 @@
  */
 int _printf(const char *format, ...)
 {
-	int len = 0;
+	int len = 0, (*func)(va_list);
 	va_list args;
-	int (*func)(va_list);
 
 	va_start(args, format);
 
+	if (format == NULL)
+		return (-1);
 	while (*format)
 	{
 		if (*format == '%' && *(format + 1) != '%')
