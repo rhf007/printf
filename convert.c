@@ -10,7 +10,7 @@
 char *convert(unsigned int num, int base)
 {
 	static const char Representation[] = "0123456789ABCDEF";
-	static const char buffer[50];
+	static char buffer[50];
 	char *ptr;
 
 	ptr = &buffer[49];
