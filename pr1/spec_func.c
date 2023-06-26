@@ -63,4 +63,5 @@ int print_%(va_list args)
  * Return: length
  */
 int print_num(va_list args)
-{}
+{
+}
