@@ -7,41 +7,46 @@
  */
 int _printf(const char *format, ...)
 {
-	int i, len = 0;
+	int len = 0;
 	va_list args;
 	int (*func)(va_list);
 
 	va_start(args, format);
 
-	if (format != NULL)
+	while (*format)
 	{
-		for (i = 0; format[i] != '\0'; i++, len++)
+		if (*format == '%' && *(format + 1) != '%')
 		{
-			if (format[i] == '%' && format[i + 1] == '\0')
+			format++;
+			func = get_spec_func(format);
+			if (*(format) == '\0')
 			{
 				return (-1);
 			}
-				/*len += checkSpecifier(format[i + 1], args, len), i++;*/
-
-			if (format[i] == '%' && format[i + 1] != '\0')
+			else if (func == NULL)
 			{
-				format++;
-				func = get_spec_func(format);
-				if (func == NULL)
-				{
-					_putchar(format[i]);
-				}
-				len += func(args) - 1;
-				i++;
+				_putchar(*(format - 1));
+				_putchar(*format);
+				len += 2;
 			}
-
-
 			else
 			{
-				_putchar(format[i]);
-				len++;
+				len += func(args);
 			}
 		}
+		else if (*format == '%' && *(format + 1) == '%')
+		{
+			format++;
+			_putchar('%');
+			len++;
+		}
+		else
+		{
+			_putchar(*format);
+			len++;
+		}
+
+		format++;
 	}
 	va_end(args);
 	return (len);
