@@ -21,11 +21,12 @@ int (*get_spec_func(char c))(va_list args)
 		{NULL, NULL}
 	};
 
-	for (i = 0; spec[i].spec != '\0'; i++)
+	
+	for(i = 0; specifier[i].z != NULL; i++)
 	{
-		if (spec[i].spec[0] == c)
+		if (*specifier[i].z == c)
 		{
-			return (spec[i].f);
+			return (specifier[i].f);
 		}
 	}
 

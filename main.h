@@ -10,7 +10,7 @@
 int _putchar(char c);
 void _puts(char *str);
 int _printf(const char *format, ...);
-int checkSpecifier(char input, va_list args, int len);
+/*int checkSpecifier(char input, va_list args, int len);*/
 
 /**
  * struct spec - Struct op
@@ -20,7 +20,7 @@ int checkSpecifier(char input, va_list args, int len);
  */
 typedef struct spec
 {
-	char *spec;
+	char *z;
 	int (*f)(va_list args);
 } spec;
 
