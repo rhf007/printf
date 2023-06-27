@@ -20,6 +20,5 @@ char *convert(unsigned int num, int base)
 		*--ptr = Representation[num % base];
 		num /= base;
 	} while (num != 0);
-
 	return (ptr);
 }

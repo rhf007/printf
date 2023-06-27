@@ -28,6 +28,6 @@ int (*get_spec_func(const char *c))(va_list args)
 			return (specifier[i].f);
 		}
 	}
-
+	
 	return (NULL);
 }
