@@ -84,3 +84,16 @@ int print_di(va_list args)
 
 	return (len);
 }
+
+/**
+ * print_binary - print converted argument to binary
+ * @args: checked string
+ * Return: length of printed chars
+ */
+int print_binary(va_list args)
+{
+	int len = 0;
+	
+
+	return (len);
+}

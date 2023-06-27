@@ -14,7 +14,7 @@ int (*get_spec_func(const char *c))(va_list args)
 		{"d", print_di},
 		{"i", print_di},
 		/*{"o", print_num},*/
-		/*{"b", print_num},*/
+		{"b", print_binary},
 		/*{"x", print_num},*/
 		/*{"X", print_num},*/
 		{"%", print_p},
@@ -28,6 +28,6 @@ int (*get_spec_func(const char *c))(va_list args)
 			return (specifier[i].f);
 		}
 	}
-	
+
 	return (NULL);
 }

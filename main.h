@@ -28,6 +28,7 @@ int print_char(va_list args);
 int print_str(va_list args);
 int print_di(va_list args);
 int print_p(va_list args);
+int print_binary(va_list args)
 char *convert(unsigned int num, int base);
 int (*get_spec_func(const char *c))(va_list args);
 
