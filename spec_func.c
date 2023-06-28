@@ -92,8 +92,18 @@ int print_di(va_list args)
  */
 int print_binary(va_list args)
 {
-	int len = 0;
-	
+	int len = 0, i, j = 0;
+	char *counter;
 
+	i = va_arg(args, int);
+	
+	_puts(convert(i, 2));
+	counter = convert(i, 2);
+
+	while (counter[j])
+	{
+		len++;
+		j++;
+	}
 	return (len);
 }

@@ -65,18 +65,18 @@ void Myprintf(char *format, ...)
 
 char *convert(unsigned int num, int base)
 {
-	static char Representation[] = "0123456789ABCDEF";
+	static char Represent[] = "0123456789ABCDEF";
 	static char buffer[50];
-	char *ptr;
+	char *pointer;
 
-	ptr = &buffer[49];
-	*ptr = '\0';
+	pointer = &buffer[49];
+	*pointer = '\0';
 	
 	do
 	{
-		*--ptr = Representation[num % base];
+		*--pointer = Represent[num % base];
 		num /= base;
 	} while (num != 0);
 
-	return (ptr);
+	return (pointer);
 }
