@@ -96,7 +96,7 @@ int print_binary(va_list args)
 	char *counter;
 
 	i = va_arg(args, int);
-	
+
 	_puts(convert(i, 2));
 	counter = convert(i, 2);
 
