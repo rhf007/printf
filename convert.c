@@ -24,14 +24,14 @@ char *convert(unsigned int num, int base)
 }
 
 /**
- * convert_hex - convert str to hexa
+ * convert_hexa - convert str to hexa
  * @base: base of the number system
  * @num: the number
  * Return: converted number
  *
  */
 
-char *convert_hex(unsigned int num, int base)
+char *convert_hexa(unsigned int num, int base)
 {
 	static const char Representation[] = "0123456789abcdef";
 	static char buffer[50];

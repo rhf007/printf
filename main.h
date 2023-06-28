@@ -29,6 +29,7 @@ int print_str(va_list args);
 int print_di(va_list args);
 int print_p(va_list args);
 int print_binary(va_list args);
+int print_unsigned(va_list args);
 int print_oct(va_list args);
 int print_hexa(va_list args);
 int print_HEXA(va_list args);
