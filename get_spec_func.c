@@ -13,7 +13,7 @@ int (*get_spec_func(const char *c))(va_list args)
 		{"s", print_str},
 		{"d", print_di},
 		{"i", print_di},
-		/*{"o", print_num},*/
+		{"o", print_oct},
 		{"b", print_binary},
 		/*{"x", print_num},*/
 		/*{"X", print_num},*/
