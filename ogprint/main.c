@@ -7,6 +7,14 @@
  */
 int main(void)
 {
-    _printf("%b\n", 98);
-    return (0);
+
+    unsigned int ui;
+
+  
+    ui = (unsigned int) __INT32_MAX__ + 1024;
+
+
+    _printf("Unsigned octal:[%o]\n", ui);
+    printf("Unsigned octal:[%o]\n", ui);
+	    return (0);
 }
