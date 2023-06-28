@@ -15,8 +15,8 @@ int (*get_spec_func(const char *c))(va_list args)
 		{"i", print_di},
 		{"o", print_oct},
 		{"b", print_binary},
-		/*{"x", print_num},*/
-		/*{"X", print_num},*/
+		{"x", print_hex},
+		{"X", print_HEXA},
 		{"%", print_p},
 		{NULL, NULL}
 	};

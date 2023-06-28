@@ -107,26 +107,3 @@ int print_binary(va_list args)
 	}
 	return (len);
 }
-
-/**
- * print_binary - print converted argument to binary
- * @args: checked string
- * Return: length of printed chars
- */
-int print_oct(va_list args)
-{
-	int len = 0, i, j = 0;
-	char *counter;
-
-	i = va_arg(args, int);
-
-	_puts(convert(i, 8));
-	counter = convert(i, 8);
-
-	while (counter[j])
-	{
-		len++;
-		j++;
-	}
-	return (len);
-}
