@@ -72,9 +72,9 @@ int print_di(va_list args)
 		_putchar('-');
 		len++;
 	}
-	_puts(convert(i, 10));
+	_puts(convert_our_inputs(i, 10));
 
-	counter = convert(i, 10);
+	counter = convert_our_inputs(i, 10);
 
 	while (counter[j])
 	{
@@ -97,8 +97,8 @@ int print_binary(va_list args)
 
 	i = va_arg(args, int);
 
-	_puts(convert(i, 2));
-	counter = convert(i, 2);
+	_puts(convert_our_inputs(i, 2));
+	counter = convert_our_inputs(i, 2);
 
 	while (counter[j])
 	{

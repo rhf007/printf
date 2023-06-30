@@ -1,13 +1,13 @@
 #include "main.h"
 /**
- * convert - convert str to int
+ * convert_our_inputs - convert str to int
  * @base: base
  * @num: the number
  * Return: converted number
  *
  */
 
-char *convert(unsigned int num, int base)
+char *convert_our_inputs(unsigned int num, int base)
 {
 	static const char Representation[] = "0123456789ABCDEF";
 	static char buffer[50];

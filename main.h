@@ -33,7 +33,7 @@ int print_unsigned(va_list args);
 int print_oct(va_list args);
 int print_hexa(va_list args);
 int print_HEXA(va_list args);
-char *convert(unsigned int num, int base);
+char *convert_our_inputs(unsigned int num, int base);
 char *convert_hexa(unsigned int num, int base);
 int (*get_spec_func(const char *c))(va_list args);
 

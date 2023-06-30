@@ -12,8 +12,8 @@ int print_oct(va_list args)
 
 	i = va_arg(args, int);
 
-	_puts(convert(i, 8));
-	counter = convert(i, 8);
+	_puts(convert_our_inputs(i, 8));
+	counter = convert_our_inputs(i, 8);
 
 	while (counter[j])
 	{
@@ -36,8 +36,8 @@ int print_HEXA(va_list args)
 
 	i = va_arg(args, int);
 
-	_puts(convert(i, 16));
-	counter = convert(i, 16);
+	_puts(convert_our_inputs(i, 16));
+	counter = convert_our_inputs(i, 16);
 
 	while (counter[j])
 	{
@@ -83,9 +83,9 @@ int print_unsigned(va_list args)
 
 	i = va_arg(args, int);
 
-	_puts(convert(i, 10));
+	_puts(convert_our_inputs(i, 10));
 
-	counter = convert(i, 10);
+	counter = convert_our_inputs(i, 10);
 
 	while (counter[j])
 	{
